@@ -20,13 +20,17 @@ a{
   background-color: saddlebrown;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-flow: wrap;
+  padding: 300px;
 }
 #test .box{
   margin-bottom: 5px;
-  width: 100px;
-  height: 100px;
+  width: calc(100% / 9 - 4px);
+  height: 20px;
   background-color: rosybrown;
+  margin: 0 2px;
+  flex: 0 1 auto;
 }
 
 .section .inner{
