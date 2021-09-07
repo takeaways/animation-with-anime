@@ -15,6 +15,12 @@ a{
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: saddlebrown;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 #test .box{
   margin-bottom: 5px;
@@ -171,7 +177,7 @@ nav{
   z-index: 2;
   opacity: 0;
   transition: all .3s ease-in-out;
-  transform: translateX(50px);
+  transform: translateX(120%);
 }
 
 nav ul{
