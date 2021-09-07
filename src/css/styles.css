@@ -10,6 +10,18 @@ ul{
 a{
   text-decoration: none;
 }
+#test{
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#test .box{
+  margin-bottom: 5px;
+  width: 100px;
+  height: 100px;
+  background-color: rosybrown;
+}
 
 .section .inner{
   display: flex;
