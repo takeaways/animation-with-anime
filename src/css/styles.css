@@ -50,8 +50,12 @@ h1.title{
   background: #ccc;
   position: relative;
   opacity: 0;
-  transition: all .3s ease-in-out .5s;
+  transition: all .3s ease-in-out;
   transform: translateY(-100%);
+}
+.slider_wrap.active{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .slider_wrap .fp-controlArrow.fp-next{
