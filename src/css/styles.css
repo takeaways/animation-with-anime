@@ -22,7 +22,7 @@ a{
   align-items: center;
   justify-content: center;
   flex-flow: wrap;
-  padding: 300px;
+  
 }
 #test .box{
   margin-bottom: 5px;
