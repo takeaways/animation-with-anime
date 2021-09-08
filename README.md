@@ -1,2 +1,4 @@
-# animation-with-anime
-[go to](https://takeaways.github.io/animation-with-anime/)
+# [animejs](https://animejs.com)를 이용한 웹 페이지
+[구경하러 가기](https://takeaways.github.io/animation-with-anime/)
+
+
