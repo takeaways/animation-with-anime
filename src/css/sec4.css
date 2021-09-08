@@ -3,7 +3,9 @@
 #sec4{
   background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
   overflow: hidden;
+  
 }
+
 
 
 #sec4 h1 img{
@@ -14,7 +16,11 @@
   width: 400px;
   z-index: 3;
   opacity: 1;
+  pointer-events: none;
 }
+
+
+
 
 #sec4 .img_wrap{
   width: 500px;
