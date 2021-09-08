@@ -41,7 +41,7 @@ function reset_active() {
 function active(i) {
   s_slider[i].classList.add("on");
   s_icons[i].classList.add("active");
-  bg.style.backgroundImage = `url(../image/bg_${i}.jpeg)`;
+  bg.style.backgroundImage = `url(image/bg_${i}.jpeg)`;
 }
 
 // event handlers
