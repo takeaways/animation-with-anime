@@ -1,0 +1,31 @@
+
+
+#sec4{
+  background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+  overflow: hidden;
+}
+
+
+#sec4 h1 img{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  z-index: 3;
+  opacity: 1;
+}
+
+#sec4 .img_wrap{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #009efd; */
+}
+
+.tail{
+  width: calc(100%/20);
+  height: calc(100%/20);
+  background-color: #7028e4;
+}

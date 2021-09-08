@@ -1,0 +1,41 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  user-select: none;
+}
+ul{
+  list-style-type: none;
+
+}
+a{
+  text-decoration: none;
+}
+
+.inner{
+  height: 100%;
+  max-width: 1200px;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.inner h1 img{
+  width: 400px;
+}
+
+h1.title{
+  font-size: 50px;
+  color:white;
+  opacity: 0;
+  transition: all .3s ease-in-out .5s;
+  transform: translateX(-100%);
+}
+
+.section.active h1.title{
+  opacity: 1;
+  transform:translateX(0)
+}

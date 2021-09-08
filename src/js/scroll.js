@@ -1,7 +1,13 @@
 import fullpage from "fullpage.js";
 import "fullpage.js/dist/fullpage.min.css";
 
-const slider_wrap = document.querySelector(".slider_wrap");
+import {
+  sectionZeroAnime,
+  sectionOneAnime,
+  sectionTwoAnime,
+  resetSectionTwoAnime,
+  sectionThreeAnime,
+} from "./anime";
 
 new fullpage("#fullpage", {
   //options here
@@ -10,18 +16,20 @@ new fullpage("#fullpage", {
   navigation: true,
   anchors: ["num0", "num1", "num2", "num3", "num4"],
   afterLoad: (old_el, new_el) => {
+    if (new_el.index === 0) {
+      sectionZeroAnime();
+    }
     if (new_el.index === 1) {
-      sec2();
+      sectionOneAnime();
     }
     if (new_el.index === 2) {
-      sec2_reset();
+      sectionTwoAnime();
+    }
+    if (old_el.index === 2) {
+      resetSectionTwoAnime();
+    }
+    if (new_el.index === 3) {
+      sectionThreeAnime();
     }
   },
 });
-
-function sec2() {
-  slider_wrap.classList.add("active");
-}
-function sec2_reset() {
-  slider_wrap.classList.remove("active");
-}

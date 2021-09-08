@@ -1,0 +1,29 @@
+#sec0{
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+#sec0 .inner{
+  display: block;
+}
+
+
+#sec0 .inner .section0-svg1,
+#sec0 .inner .section0-svg2{
+  width: 657px;
+  height: 106px;
+  position: absolute;
+  left: 50%;
+  top:50%;
+}
+
+#sec0 .inner .section0-svg1{
+  fill: none;
+  stroke: rgb(216, 18, 199);
+  z-index: 2;
+  stroke-width: 5;
+  transform: translate(-50%, -50%);
+}
+
+#sec0 .inner .section0-svg2{
+  transform: translate(-49.5%, -49.5%);
+}
