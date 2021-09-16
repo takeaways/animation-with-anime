@@ -163,17 +163,6 @@ eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // 
 
 /***/ }),
 
-/***/ "./src/image/back.png":
-/*!****************************!*\
-  !*** ./src/image/back.png ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"src/image/back.png\");\n\n//# sourceURL=webpack://animation-with-anime/./src/image/back.png?");
-
-/***/ }),
-
 /***/ "./node_modules/fullpage.js/dist/fullpage.js":
 /*!***************************************************!*\
   !*** ./node_modules/fullpage.js/dist/fullpage.js ***!
@@ -290,7 +279,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/styles.css */ \"./src/css/styles.css\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ \"./src/js/nav.js\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nav__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scroll */ \"./src/js/scroll.js\");\n/* harmony import */ var _anime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./anime */ \"./src/js/anime.js\");\n/* harmony import */ var _scratch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scratch */ \"./src/js/scratch.js\");\n\n\n\n\n\n\n(0,_anime__WEBPACK_IMPORTED_MODULE_3__.logo)();\n\n//section1\nconst s_icons = document.querySelectorAll(\".slide_icons li\");\nconst s_right = document.querySelector(\".slide_btn.right\");\nconst s_left = document.querySelector(\".slide_btn.left\");\nconst bg = document.querySelector(\"#sec1\");\nconst s_slider = document.querySelectorAll(\".sec1_slider li\");\n\ns_icons.forEach((li) => {\n  li.addEventListener(\"click\", (e) => {\n    const {\n      target: {\n        dataset: { index },\n      },\n    } = e;\n\n    reset_active();\n    if (li.tagName === \"LI\") {\n      for (let i = 0; i < s_icons.length; i++) {\n        if (index == i) {\n          active(i);\n        }\n      }\n    }\n  });\n});\n\nfunction reset_active() {\n  s_slider.forEach((_, idx) => {\n    s_slider[idx].classList.remove(\"on\");\n    s_icons[idx].classList.remove(\"active\");\n  });\n}\n\nfunction active(i) {\n  s_slider[i].classList.add(\"on\");\n  s_icons[i].classList.add(\"active\");\n  bg.style.backgroundImage = `url(image/bg_${i}.jpeg)`;\n}\n\n// event handlers\nfunction handleNext(e) {\n  e.preventDefault();\n  const curr_slide = document.querySelector(\".sec1_slider li.on\");\n  let i = Number(curr_slide.dataset.index) + 1;\n  if (i >= s_slider.length) {\n    i = 0;\n  }\n  reset_active();\n  active(i);\n}\n\nfunction handlePrev(e) {\n  e.preventDefault();\n  const curr_slide = document.querySelector(\".sec1_slider li.on\");\n  let i = Number(curr_slide.dataset.index) - 1;\n  if (i < 0) {\n    i = s_slider.length - 1;\n  }\n  reset_active();\n  active(i);\n}\n\n// event bindings\ns_right.addEventListener(\"click\", handleNext);\ns_left.addEventListener(\"click\", handlePrev);\n\n\n//# sourceURL=webpack://animation-with-anime/./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/styles.css */ \"./src/css/styles.css\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ \"./src/js/nav.js\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nav__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scroll */ \"./src/js/scroll.js\");\n/* harmony import */ var _anime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./anime */ \"./src/js/anime.js\");\n/* harmony import */ var _scratch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scratch */ \"./src/js/scratch.js\");\n/* harmony import */ var _scratch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scratch__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n(0,_anime__WEBPACK_IMPORTED_MODULE_3__.logo)();\n\n//section1\nconst s_icons = document.querySelectorAll(\".slide_icons li\");\nconst s_right = document.querySelector(\".slide_btn.right\");\nconst s_left = document.querySelector(\".slide_btn.left\");\nconst bg = document.querySelector(\"#sec1\");\nconst s_slider = document.querySelectorAll(\".sec1_slider li\");\n\ns_icons.forEach((li) => {\n  li.addEventListener(\"click\", (e) => {\n    const {\n      target: {\n        dataset: { index },\n      },\n    } = e;\n\n    reset_active();\n    if (li.tagName === \"LI\") {\n      for (let i = 0; i < s_icons.length; i++) {\n        if (index == i) {\n          active(i);\n        }\n      }\n    }\n  });\n});\n\nfunction reset_active() {\n  s_slider.forEach((_, idx) => {\n    s_slider[idx].classList.remove(\"on\");\n    s_icons[idx].classList.remove(\"active\");\n  });\n}\n\nfunction active(i) {\n  s_slider[i].classList.add(\"on\");\n  s_icons[i].classList.add(\"active\");\n  bg.style.backgroundImage = `url(image/bg_${i}.jpeg)`;\n}\n\n// event handlers\nfunction handleNext(e) {\n  e.preventDefault();\n  const curr_slide = document.querySelector(\".sec1_slider li.on\");\n  let i = Number(curr_slide.dataset.index) + 1;\n  if (i >= s_slider.length) {\n    i = 0;\n  }\n  reset_active();\n  active(i);\n}\n\nfunction handlePrev(e) {\n  e.preventDefault();\n  const curr_slide = document.querySelector(\".sec1_slider li.on\");\n  let i = Number(curr_slide.dataset.index) - 1;\n  if (i < 0) {\n    i = s_slider.length - 1;\n  }\n  reset_active();\n  active(i);\n}\n\n// event bindings\ns_right.addEventListener(\"click\", handleNext);\ns_left.addEventListener(\"click\", handlePrev);\n\n\n//# sourceURL=webpack://animation-with-anime/./src/js/app.js?");
 
 /***/ }),
 
@@ -308,10 +297,9 @@ eval("const bodyEle = document.querySelector(\"body\");\nconst navBtn = document
 /*!***************************!*\
   !*** ./src/js/scratch.js ***!
   \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _image_back_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../image/back.png */ \"./src/image/back.png\");\n\nconst canvas = document.getElementById(\"canvas\");\nconst ctx = canvas.getContext(\"2d\");\nconst container = document.querySelector(\"#sec5 .inner\");\nconst coin = document.getElementById(\"coin\");\nconst backgroundImage = new Image();\nbackgroundImage.src = _image_back_png__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n\nconst width = 300;\nconst height = 200;\nconst maxDeg = 15;\nconst coinSize = 50 / 2;\nconst coinPosition = { x: 0, y: 0 };\n\n// event handlers\n\nfunction handleLoad() {\n  container.style.width = width + \"px\";\n  container.style.height = height + \"px\";\n  canvas.width = width;\n  canvas.height = height;\n  ctx.drawImage(backgroundImage, 0, 0, width, height);\n}\nfunction handleMouseMove(e) {\n  const { clientX, clientY } = e;\n  const { width, height, x, y } = container.getBoundingClientRect();\n\n  const centerPosition = {\n    x: x + width / 2,\n    y: y + height / 2,\n  };\n\n  const moveRate = {\n    x: (centerPosition.x - clientX) / 150,\n    y: (centerPosition.y - clientY) / 100,\n  };\n\n  coinPosition[\"x\"] = clientX - x - coinSize;\n  coinPosition[\"y\"] = clientY - y - coinSize;\n\n  container.style.transform = `\n    rotateX(${moveRate.y * maxDeg}deg) rotateY(${moveRate.x * maxDeg}deg)\n  `;\n  coin.style.transform = `\n    translate(${coinPosition.x}px, ${coinPosition.y}px)\n  `;\n}\n\nfunction handleScratch(e) {\n  e.stopPropagation();\n  if (e.touches) {\n    e = e.touches[0];\n  }\n\n  const { clientX, clientY } = e;\n  const { x, y } = container.getBoundingClientRect();\n\n  ctx.globalCompositeOperation = \"destination-out\";\n  ctx.beginPath();\n  ctx.arc(clientX - x, clientY - y, 15, 0, Math.PI * 2, true);\n  ctx.fill();\n\n  coinPosition[\"x\"] = clientX - x - coinSize;\n  coinPosition[\"y\"] = clientY - y - coinSize;\n\n  coin.style.transform = `\n    translate(${coinPosition.x}px, ${coinPosition.y}px)\n  `;\n}\n\n// binding event\n\n// 1 mouse\ncontainer.addEventListener(\"mousemove\", handleMouseMove);\ncontainer.addEventListener(\"mousedown\", (e) => {\n  e.stopPropagation();\n  container.style.transform = `rotateX(0deg) rotateY(0deg)`;\n  container.removeEventListener(\"mousemove\", handleMouseMove);\n  container.addEventListener(\"mousemove\", handleScratch);\n});\ncontainer.addEventListener(\"mouseup\", (e) => {\n  e.stopPropagation();\n  container.style.transform = `rotateX(0deg) rotateY(0deg)`;\n  container.addEventListener(\"mousemove\", handleMouseMove);\n  container.removeEventListener(\"mousemove\", handleScratch);\n});\ncontainer.addEventListener(\"mouseover\", () => {\n  container.style.transition = `transform .1s ease-in-out`;\n});\ncontainer.addEventListener(\"mouseleave\", () => {\n  container.style.transition = `transform 1s ease-in-out`;\n  container.style.transform = `rotateX(0deg) rotateY(0deg)`;\n});\n\ncontainer.addEventListener(\"touchmove\", handleScratch);\n\nwindow.addEventListener(\"load\", handleLoad);\n\n\n//# sourceURL=webpack://animation-with-anime/./src/js/scratch.js?");
+eval("const canvas = document.getElementById(\"canvas\");\nconst ctx = canvas.getContext(\"2d\");\nconst container = document.querySelector(\"#sec5 .inner\");\nconst coin = document.getElementById(\"coin\");\nconst backgroundImage = new Image();\nbackgroundImage.src = \"image/back.png\";\n\nconst width = 300;\nconst height = 200;\nconst maxDeg = 15;\nconst coinSize = 50 / 2;\nconst coinPosition = { x: 0, y: 0 };\n\n// event handlers\n\nfunction handleLoad() {\n  container.style.width = width + \"px\";\n  container.style.height = height + \"px\";\n  canvas.width = width;\n  canvas.height = height;\n  ctx.drawImage(backgroundImage, 0, 0, width, height);\n}\nfunction handleMouseMove(e) {\n  const { clientX, clientY } = e;\n  const { width, height, x, y } = container.getBoundingClientRect();\n\n  const centerPosition = {\n    x: x + width / 2,\n    y: y + height / 2,\n  };\n\n  const moveRate = {\n    x: (centerPosition.x - clientX) / 150,\n    y: (centerPosition.y - clientY) / 100,\n  };\n\n  coinPosition[\"x\"] = clientX - x - coinSize;\n  coinPosition[\"y\"] = clientY - y - coinSize;\n\n  container.style.transform = `\n    rotateX(${moveRate.y * maxDeg}deg) rotateY(${moveRate.x * maxDeg}deg)\n  `;\n  coin.style.transform = `\n    translate(${coinPosition.x}px, ${coinPosition.y}px)\n  `;\n}\n\nfunction handleScratch(e) {\n  e.stopPropagation();\n  if (e.touches) {\n    e = e.touches[0];\n  }\n\n  const { clientX, clientY } = e;\n  const { x, y } = container.getBoundingClientRect();\n\n  ctx.globalCompositeOperation = \"destination-out\";\n  ctx.beginPath();\n  ctx.arc(clientX - x, clientY - y, 15, 0, Math.PI * 2, true);\n  ctx.fill();\n\n  coinPosition[\"x\"] = clientX - x - coinSize;\n  coinPosition[\"y\"] = clientY - y - coinSize;\n\n  coin.style.transform = `\n    translate(${coinPosition.x}px, ${coinPosition.y}px)\n  `;\n}\n\n// binding event\n\n// 1 mouse\ncontainer.addEventListener(\"mousemove\", handleMouseMove);\ncontainer.addEventListener(\"mousedown\", (e) => {\n  e.stopPropagation();\n  container.style.transform = `rotateX(0deg) rotateY(0deg)`;\n  container.removeEventListener(\"mousemove\", handleMouseMove);\n  container.addEventListener(\"mousemove\", handleScratch);\n});\ncontainer.addEventListener(\"mouseup\", (e) => {\n  e.stopPropagation();\n  container.style.transform = `rotateX(0deg) rotateY(0deg)`;\n  container.addEventListener(\"mousemove\", handleMouseMove);\n  container.removeEventListener(\"mousemove\", handleScratch);\n});\ncontainer.addEventListener(\"mouseover\", () => {\n  container.style.transition = `transform .1s ease-in-out`;\n});\ncontainer.addEventListener(\"mouseleave\", () => {\n  container.style.transition = `transform 1s ease-in-out`;\n  container.style.transform = `rotateX(0deg) rotateY(0deg)`;\n});\n\ncontainer.addEventListener(\"touchmove\", handleScratch);\n\nwindow.addEventListener(\"load\", handleLoad);\n\n\n//# sourceURL=webpack://animation-with-anime/./src/js/scratch.js?");
 
 /***/ }),
 
@@ -333,7 +321,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var full
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"a7d69c76508e02de1075.png\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/arr.png?");
+eval("module.exports = __webpack_require__.p + \"5e21487489dd64c8c2bb.png\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/arr.png?");
 
 /***/ }),
 
@@ -344,7 +332,7 @@ eval("module.exports = __webpack_require__.p + \"a7d69c76508e02de1075.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"0f88341b20e0183c760a.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_0.jpeg?");
+eval("module.exports = __webpack_require__.p + \"be4aed444ee4ccd343b9.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_0.jpeg?");
 
 /***/ }),
 
@@ -355,7 +343,7 @@ eval("module.exports = __webpack_require__.p + \"0f88341b20e0183c760a.jpeg\";\n\
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"9f912c3eac907a539895.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_1.jpeg?");
+eval("module.exports = __webpack_require__.p + \"e3dd901afa06b35c56ce.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_1.jpeg?");
 
 /***/ }),
 
@@ -366,7 +354,7 @@ eval("module.exports = __webpack_require__.p + \"9f912c3eac907a539895.jpeg\";\n\
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"5ceaade190264126c5b8.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_2.jpeg?");
+eval("module.exports = __webpack_require__.p + \"3d9af6757db2a860c170.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_2.jpeg?");
 
 /***/ }),
 
@@ -377,7 +365,7 @@ eval("module.exports = __webpack_require__.p + \"5ceaade190264126c5b8.jpeg\";\n\
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"7f868ace7fe9e24e3192.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_3.jpeg?");
+eval("module.exports = __webpack_require__.p + \"b7263af0305e62bc056d.jpeg\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/bg_3.jpeg?");
 
 /***/ }),
 
@@ -388,7 +376,7 @@ eval("module.exports = __webpack_require__.p + \"7f868ace7fe9e24e3192.jpeg\";\n\
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"4da17fc26b37f74c11c9.png\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/coin.png?");
+eval("module.exports = __webpack_require__.p + \"257d4b4d7c1e7e157f4f.png\";\n\n//# sourceURL=webpack://animation-with-anime/./src/image/coin.png?");
 
 /***/ })
 
