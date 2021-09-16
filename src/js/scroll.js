@@ -14,7 +14,7 @@ new fullpage("#fullpage", {
   autoScrolling: true,
   scrollHorizontally: true,
   navigation: true,
-  anchors: ["num0", "num1", "num2", "num3", "num4"],
+  anchors: ["num0", "num1", "num2", "num3", "num4", "num5"],
   afterLoad: (old_el, new_el) => {
     if (new_el.index === 0) {
       sectionZeroAnime();

@@ -1,0 +1,70 @@
+#sec5{
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  overflow: hidden;
+  perspective: 500px;
+  /* cursor: none; */
+}
+
+#sec5 .inner{
+  cursor: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(20, 20, 20, 0.15) 1.95px 1.95px 2.6px;
+  transition: transform .1s ease-in-out .1s;
+  will-change:transform;
+  
+}
+
+#sec5 .inner .back-image{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#sec5 .inner header{
+  font-weight: 600;
+  color:white;
+}
+
+#sec5 .inner header h2{
+  font-size: 52px;
+}
+#sec5 .inner header h3{
+  font-size: 48px;
+}
+
+#sec5 .inner #coin{
+  position: absolute;
+  background-image: url(../image/coin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top:0px;
+  left: 0px;
+  z-index: 2;
+  transform-origin: center;
+}
+
+
+#sec5 canvas{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  z-index: 1;
+}
+
+

@@ -2,6 +2,7 @@ import "../css/styles.css";
 import "./nav";
 import "./scroll";
 import { logo } from "./anime";
+import "./scratch";
 
 logo();
 
